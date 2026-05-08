@@ -200,7 +200,9 @@ const HowItWorks = () => {
             {steps.map((step, index) => (
               <div
                 key={index}
-                ref={(el) => (refs.current[index] = el)}
+                ref={(el) => {
+                  refs.current[index] = el;
+                }}
                 className={`relative flex items-center justify-between transition-all duration-700 opacity-0 translate-y-10 ${
                   index % 2 === 0 ? "flex-row" : "flex-row-reverse"
                 }`}
